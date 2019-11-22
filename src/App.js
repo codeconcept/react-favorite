@@ -6,11 +6,13 @@ import Food from "./Food";
 import movieItems from "./fakeMovieService";
 import Movie from "./Movie";
 import Image from "./Image";
+import Title from "./Title";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <Title text="Design patterns" />
         <h3>Add to favorite</h3>
         <Image
           title="Dijon"
