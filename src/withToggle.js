@@ -1,6 +1,6 @@
 import React from "react";
 
-const withToggle = (Comp, propertyName = "isFavorite") => {
+const withToggle = ({ propertyName }) => Comp => {
   return class WithToggle extends React.Component {
     state = { isFavorite: false };
     toggleFavorite = () => {

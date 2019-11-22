@@ -5,12 +5,12 @@ import withToggle from "./withToggle";
 
 class Favorite extends React.Component {
   render() {
-    const { children, isOn, color } = this.props;
+    const { children, isAdded, color } = this.props;
     return (
       <div>
         <FontAwesomeIcon
           icon={faHeart}
-          color={isOn ? color : ""}
+          color={isAdded ? color : ""}
           style={{ cursor: "pointer" }}
         />
         {children}
@@ -19,4 +19,4 @@ class Favorite extends React.Component {
   }
 }
 
-export default withToggle(Favorite, "isOn");
+export default withToggle({ propertyName: "isAdded" })(Favorite);
