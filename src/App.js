@@ -12,7 +12,7 @@ function App() {
       <header className="App-header">
         <h3>Add to favorite</h3>
         {foodItems.map(fi => (
-          <Favorite key={fi.id}>
+          <Favorite key={fi.id} color="#7fc50e">
             <Food title={fi.title} />
           </Favorite>
         ))}
@@ -20,7 +20,7 @@ function App() {
         <br />
         <br />
         {movieItems.map(mi => (
-          <Favorite key={mi.id}>
+          <Favorite key={mi.id} color="#c51d3c">
             <Movie title={mi.title} year={mi.year} />
           </Favorite>
         ))}
