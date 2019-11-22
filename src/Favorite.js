@@ -3,12 +3,21 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
 class Favorite extends React.Component {
-  state = {};
+  state = { isFavorite: false };
+  toggleFavorite = () => {
+    this.setState({ isFavorite: !this.state.isFavorite });
+  };
   render() {
     const { children } = this.props;
+    const { isFavorite } = this.state;
     return (
-      <div style={{ display: "inline" }}>
-        <FontAwesomeIcon icon={faHeart} />
+      <div>
+        <FontAwesomeIcon
+          icon={faHeart}
+          color={isFavorite ? "#c51d3c" : ""}
+          onClick={this.toggleFavorite}
+          style={{ cursor: "pointer" }}
+        />
         {children}
       </div>
     );
