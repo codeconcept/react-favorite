@@ -1,14 +1,14 @@
 import React from "react";
 
 class Toggle extends React.Component {
-  state = { isFavorite: false };
+  state = { isOn: false };
   toggleFavorite = () => {
-    this.setState({ isFavorite: !this.state.isFavorite });
+    this.setState({ isOn: !this.state.isOn });
   };
   render() {
     return (
       <div onClick={this.toggleFavorite}>
-        {this.props.render(this.state.isFavorite)}
+        {this.props.children(this.state.isOn)}
       </div>
     );
   }
