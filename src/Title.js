@@ -3,8 +3,8 @@ import Toggle from "./Toggle";
 
 const Title = ({ text }) => {
   return (
-    <Toggle>
-      {function(isColorized) {
+    <Toggle
+      render={isColorized => {
         if (isColorized) {
           return (
             <h1 style={{ color: "#f5ce5f", cursor: "pointer" }}>{text}</h1>
@@ -13,7 +13,7 @@ const Title = ({ text }) => {
           return <h1 style={{ color: "white", cursor: "pointer" }}>{text}</h1>;
         }
       }}
-    </Toggle>
+    ></Toggle>
   );
 };
 

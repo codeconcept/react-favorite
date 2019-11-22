@@ -8,7 +8,7 @@ class Toggle extends React.Component {
   render() {
     return (
       <div onClick={this.toggleFavorite}>
-        {this.props.children(this.state.isFavorite)}
+        {this.props.render(this.state.isFavorite)}
       </div>
     );
   }
